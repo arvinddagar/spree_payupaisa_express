@@ -23,7 +23,8 @@
         </tr>
         <tr>
           <td>Success URI: </td>
-          <td colspan="3"><input name="surl" value="https://#{Spree::Config[:site_url]}#/payupaisa/confirm?payment_method_id=7&authencity_token=xbOc5kBhXAOAko0ja6TGjyD4sbC5MtBbI7PEd48uiRg=" size="64" readonly /></td>
+          <%binding.pry%>
+          <td colspan="3"><input name="surl" value="https://#{Spree::Config[:site_url]}#/payupaisa/confirm?payment_method_id=<%=params[:payment_method_id]%>&authencity_token=<%params[:authentication_token]%>" size="64" readonly /></td>
         </tr>
         <tr>
           <td>Failure URI: </td>
